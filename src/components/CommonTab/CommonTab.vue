@@ -1,22 +1,36 @@
 <template>
   <div class="common-tab">
-    <router-link tag="div" class="tab-item" to="/recommend">
+    <router-link tag="div" class="tab-item" :to="RECOMMEND_PAGE">
       <span class="tab-link">推荐</span>
     </router-link>
-    <router-link tag="div" class="tab-item" to="/singer">
+    <router-link tag="div" class="tab-item" :to="SINGER_PAGE">
       <span class="tab-link">歌手</span>
     </router-link>
-    <router-link tag="div" class="tab-item" to="/rank">
+    <router-link tag="div" class="tab-item" :to="RANK_PAGE">
       <span class="tab-link">排行</span>
     </router-link>
-    <router-link tag="div" class="tab-item" to="/search">
+    <router-link tag="div" class="tab-item" :to="SEARCH_PAGE">
       <span class="tab-link">搜索</span>
     </router-link>
   </div>
 </template>
 
 <script>
-export default {}
+import {RECOMMEND_PAGE} from 'constant/routes/recommend'
+import {SINGER_PAGE} from 'constant/routes/singer'
+import {RANK_PAGE} from 'constant/routes/rank'
+import {SEARCH_PAGE} from 'constant/routes/search'
+
+export default {
+  data () {
+    return {
+      RECOMMEND_PAGE,
+      SINGER_PAGE,
+      RANK_PAGE,
+      SEARCH_PAGE
+    }
+  }
+}
 </script>
 
 <style lang="stylus" scoped>

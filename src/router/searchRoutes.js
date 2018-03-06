@@ -1,8 +1,9 @@
 import SearchPage from 'components/SearchPage/SearchPage.vue'
+import {SEARCH_PAGE} from 'constant/routes/search'
 
 export default [
   {
-    path: '/search',
+    path: SEARCH_PAGE,
     component: SearchPage
   }
 ]
